@@ -28,7 +28,6 @@ class CreatePostListener implements ShouldQueue
             'text' => "Title: ".$event->post[0]."\r\nText: ".$event->post[1]."\r\nLikes: ".$event->post[2],
         ];
         $response = file_get_contents("https://api.telegram.org/bot$apiToken/sendMessage?" . http_build_query($data) );
-        // Do what you want with result
 
     }
 }
